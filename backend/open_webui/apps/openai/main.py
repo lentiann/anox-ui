@@ -137,7 +137,7 @@ async def speech(request: Request, user=Depends(get_verified_user)):
         headers["Content-Type"] = "application/json"
         if "openrouter.ai" in app.state.config.OPENAI_API_BASE_URLS[idx]:
             headers["HTTP-Referer"] = "https://openwebui.com/"
-            headers["X-Title"] = "Open WebUI"
+            headers["X-Title"] = "Anox Dashboard"
         r = None
         try:
             r = requests.post(
@@ -162,7 +162,7 @@ async def speech(request: Request, user=Depends(get_verified_user)):
 
         except Exception as e:
             log.exception(e)
-            error_detail = "Open WebUI: Server Connection Error"
+            error_detail = "Anox Dashboard: Server Connection Error"
             if r is not None:
                 try:
                     res = r.json()
@@ -355,7 +355,7 @@ async def get_models(url_idx: Optional[int] = None, user=Depends(get_verified_us
             return response_data
         except Exception as e:
             log.exception(e)
-            error_detail = "Open WebUI: Server Connection Error"
+            error_detail = "Anox Dashboard: Server Connection Error"
             if r is not None:
                 try:
                     res = r.json()
@@ -431,7 +431,7 @@ async def generate_chat_completion(
     headers["Content-Type"] = "application/json"
     if "openrouter.ai" in app.state.config.OPENAI_API_BASE_URLS[idx]:
         headers["HTTP-Referer"] = "https://openwebui.com/"
-        headers["X-Title"] = "Open WebUI"
+        headers["X-Title"] = "Anox Dashboard"
 
     r = None
     session = None
@@ -471,6 +471,7 @@ async def generate_chat_completion(
             return response
     except Exception as e:
         log.exception(e)
+<<<<<<< HEAD:backend/open_webui/apps/openai/main.py
         error_detail = "Open WebUI: Server Connection Error"
         if isinstance(response, dict):
             if "error" in response:
@@ -478,6 +479,17 @@ async def generate_chat_completion(
         elif isinstance(response, str):
             error_detail = response
 
+=======
+        error_detail = "Anox Dashboard: Server Connection Error"
+        if r is not None:
+            try:
+                res = await r.json()
+                print(res)
+                if "error" in res:
+                    error_detail = f"External: {res['error']['message'] if 'message' in res['error'] else res['error']}"
+            except Exception:
+                error_detail = f"External: {e}"
+>>>>>>> updated for ui:backend/apps/openai/main.py
         raise HTTPException(status_code=r.status if r else 500, detail=error_detail)
     finally:
         if not streaming and session:
@@ -532,7 +544,7 @@ async def proxy(path: str, request: Request, user=Depends(get_verified_user)):
             return response_data
     except Exception as e:
         log.exception(e)
-        error_detail = "Open WebUI: Server Connection Error"
+        error_detail = "Anox Dashboard: Server Connection Error"
         if r is not None:
             try:
                 res = await r.json()
