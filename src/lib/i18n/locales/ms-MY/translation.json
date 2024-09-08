@@ -450,7 +450,7 @@
 	"Oops! There was an error in the previous response. Please try again or contact admin.": "Maaf, terdapat ralat dalam respons sebelumnya. Sila cuba lagi atau hubungi pentadbir",
 	"Oops! You're using an unsupported method (frontend only). Please serve the WebUI from the backend.": "Maaf, Anda menggunakan kaedah yang tidak disokong (bahagian 'frontend' sahaja). Sila sediakan WebUI dari 'backend'.",
 	"Open new chat": "Buka perbualan baru",
-	"Open WebUI version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Open WebUI version (v{{OPEN_WEBUI_VERSION}}) adalah lebih rendah daripada versi yang diperlukan iaitu (v{{REQUIRED_VERSION}})",
+	"Anox Dashboard version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Anox Dashboard version (v{{OPEN_WEBUI_VERSION}}) adalah lebih rendah daripada versi yang diperlukan iaitu (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "API OpenAI",
 	"OpenAI API Config": "Tetapan API OpenAI",
@@ -726,7 +726,7 @@
 	"You're a helpful assistant.": "Anda seorang pembantu yang bagus",
 	"You're now logged in.": "Anda kini telah log masuk.",
 	"Your account status is currently pending activation.": "Status akaun anda ialah sedang menunggu pengaktifan.",
-	"Your entire contribution will go directly to the plugin developer; Open WebUI does not take any percentage. However, the chosen funding platform might have its own fees.": "Seluruh sumbangan anda akan dihantar terus kepada pembangun 'plugin'; Open WebUI tidak mengambil sebarang peratusan keuntungan daripadanya. Walau bagaimanapun, platform pembiayaan yang dipilih mungkin mempunyai caj tersendiri.",
+	"Your entire contribution will go directly to the plugin developer; Anox Dashboard does not take any percentage. However, the chosen funding platform might have its own fees.": "Seluruh sumbangan anda akan dihantar terus kepada pembangun 'plugin'; Anox Dashboard tidak mengambil sebarang peratusan keuntungan daripadanya. Walau bagaimanapun, platform pembiayaan yang dipilih mungkin mempunyai caj tersendiri.",
 	"Youtube": "Youtube",
 	"Youtube Loader Settings": "Tetapan Pemuat Youtube"
 }

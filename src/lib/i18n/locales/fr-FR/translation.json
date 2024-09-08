@@ -450,7 +450,7 @@
 	"Oops! There was an error in the previous response. Please try again or contact admin.": "Oops ! Il y a eu une erreur dans la réponse précédente. Veuillez réessayer ou contacter l'administrateur.",
 	"Oops! You're using an unsupported method (frontend only). Please serve the WebUI from the backend.": "Oups\u00a0! Vous utilisez une méthode non prise en charge (frontend uniquement). Veuillez servir l'interface Web à partir du backend.",
 	"Open new chat": "Ouvrir une nouvelle discussion",
-	"Open WebUI version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "La version Open WebUI (v{{OPEN_WEBUI_VERSION}}) est inférieure à la version requise (v{{REQUIRED_VERSION}})",
+	"Anox Dashboard version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "La version Anox Dashboard (v{{OPEN_WEBUI_VERSION}}) est inférieure à la version requise (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "API OpenAI",
 	"OpenAI API Config": "Configuration de l'API OpenAI",
@@ -727,7 +727,7 @@
 	"You're a helpful assistant.": "Vous êtes un assistant serviable.",
 	"You're now logged in.": "Vous êtes désormais connecté.",
 	"Your account status is currently pending activation.": "Votre statut de compte est actuellement en attente d'activation.",
-	"Your entire contribution will go directly to the plugin developer; Open WebUI does not take any percentage. However, the chosen funding platform might have its own fees.": "L'intégralité de votre contribution ira directement au développeur du plugin ; Open WebUI ne prend aucun pourcentage. Cependant, la plateforme de financement choisie peut avoir ses propres frais.",
+	"Your entire contribution will go directly to the plugin developer; Anox Dashboard does not take any percentage. However, the chosen funding platform might have its own fees.": "L'intégralité de votre contribution ira directement au développeur du plugin ; Anox Dashboard ne prend aucun pourcentage. Cependant, la plateforme de financement choisie peut avoir ses propres frais.",
 	"Youtube": "YouTube",
 	"Youtube Loader Settings": "Paramètres de l'outil de téléchargement YouTube"
 }

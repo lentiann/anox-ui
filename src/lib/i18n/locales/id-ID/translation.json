@@ -450,7 +450,7 @@
 	"Oops! There was an error in the previous response. Please try again or contact admin.": "Ups! Ada kesalahan pada respons sebelumnya. Silakan coba lagi atau hubungi admin.",
 	"Oops! You're using an unsupported method (frontend only). Please serve the WebUI from the backend.": "Ups! Anda menggunakan metode yang tidak didukung (hanya untuk frontend). Silakan sajikan WebUI dari backend.",
 	"Open new chat": "Buka obrolan baru",
-	"Open WebUI version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "",
+	"Anox Dashboard version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "API OpenAI",
 	"OpenAI API Config": "Konfigurasi API OpenAI",
@@ -726,7 +726,7 @@
 	"You're a helpful assistant.": "Anda adalah asisten yang membantu.",
 	"You're now logged in.": "Anda sekarang sudah masuk.",
 	"Your account status is currently pending activation.": "Status akun Anda saat ini sedang menunggu aktivasi.",
-	"Your entire contribution will go directly to the plugin developer; Open WebUI does not take any percentage. However, the chosen funding platform might have its own fees.": "",
+	"Your entire contribution will go directly to the plugin developer; Anox Dashboard does not take any percentage. However, the chosen funding platform might have its own fees.": "",
 	"Youtube": "Youtube",
 	"Youtube Loader Settings": "Pengaturan Pemuat Youtube"
 }

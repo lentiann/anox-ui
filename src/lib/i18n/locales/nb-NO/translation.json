@@ -450,7 +450,7 @@
 	"Oops! There was an error in the previous response. Please try again or contact admin.": "Oops! Det oppstod en feil i forrige svar. Prøv igjen eller kontakt administrator",
 	"Oops! You're using an unsupported method (frontend only). Please serve the WebUI from the backend.": "Oops! Du bruker en ikke-støttet metode (kun frontend). Vennligst server WebUI fra backend.",
 	"Open new chat": "Åpne ny chat",
-	"Open WebUI version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Open WebUI-versjon (v{{OPEN_WEBUI_VERSION}}) er lavere enn nødvendig versjon (v{{REQUIRED_VERSION}})",
+	"Anox Dashboard version (v{{OPEN_WEBUI_VERSION}}) is lower than required version (v{{REQUIRED_VERSION}})": "Anox Dashboard-versjon (v{{OPEN_WEBUI_VERSION}}) er lavere enn nødvendig versjon (v{{REQUIRED_VERSION}})",
 	"OpenAI": "OpenAI",
 	"OpenAI API": "OpenAI API",
 	"OpenAI API Config": "OpenAI API-konfigurasjon",
@@ -726,7 +726,7 @@
 	"You're a helpful assistant.": "Du er en hjelpsom assistent.",
 	"You're now logged in.": "Du er nå logget inn.",
 	"Your account status is currently pending activation.": "Din konto venter for øyeblikket på aktivering.",
-	"Your entire contribution will go directly to the plugin developer; Open WebUI does not take any percentage. However, the chosen funding platform might have its own fees.": "Hele beløpet du gir går uavkortet til utvikleren av tillegget; Open WebUI tar ikke noe av dette. Den valgte finansieringsplattformen kan derimot ha egne gebyrer.",
+	"Your entire contribution will go directly to the plugin developer; Anox Dashboard does not take any percentage. However, the chosen funding platform might have its own fees.": "Hele beløpet du gir går uavkortet til utvikleren av tillegget; Anox Dashboard tar ikke noe av dette. Den valgte finansieringsplattformen kan derimot ha egne gebyrer.",
 	"Youtube": "Youtube",
 	"Youtube Loader Settings": "Innstillinger for YouTube-laster"
 }

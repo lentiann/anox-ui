@@ -1,4 +1,4 @@
-# Open WebUI (Formerly Ollama WebUI) 👋
+# Anox Dashboard (Formerly Ollama WebUI) 👋
 
 ![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/open-webui/open-webui?style=social)
@@ -11,17 +11,17 @@
 [![Discord](https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&logoColor=white)](https://discord.gg/5rJgQTnV4s)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/tjbck)
 
-Open WebUI is an [extensible](https://github.com/open-webui/pipelines), feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs. For more information, be sure to check out our [Open WebUI Documentation](https://docs.openwebui.com/).
+Anox Dashboard is an [extensible](https://github.com/open-webui/pipelines), feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs. For more information, be sure to check out our [Anox Dashboard Documentation](https://docs.openwebui.com/).
 
-![Open WebUI Demo](./demo.gif)
+![Anox Dashboard Demo](./demo.gif)
 
-## Key Features of Open WebUI ⭐
+## Key Features of Anox Dashboard ⭐
 
 - 🚀 **Effortless Setup**: Install seamlessly using Docker or Kubernetes (kubectl, kustomize or helm) for a hassle-free experience with support for both `:ollama` and `:cuda` tagged images.
 
 - 🤝 **Ollama/OpenAI API Integration**: Effortlessly integrate OpenAI-compatible APIs for versatile conversations alongside Ollama models. Customize the OpenAI API URL to link with **LMStudio, GroqCloud, Mistral, OpenRouter, and more**.
 
-- 🧩 **Pipelines, Open WebUI Plugin Support**: Seamlessly integrate custom logic and Python libraries into Open WebUI using [Pipelines Plugin Framework](https://github.com/open-webui/pipelines). Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. [Examples](https://github.com/open-webui/pipelines/tree/main/examples) include **Function Calling**, User **Rate Limiting** to control access, **Usage Monitoring** with tools like Langfuse, **Live Translation with LibreTranslate** for multilingual support, **Toxic Message Filtering** and much more.
+- 🧩 **Pipelines, Anox Dashboard Plugin Support**: Seamlessly integrate custom logic and Python libraries into Anox Dashboard using [Pipelines Plugin Framework](https://github.com/open-webui/pipelines). Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. [Examples](https://github.com/open-webui/pipelines/tree/main/examples) include **Function Calling**, User **Rate Limiting** to control access, **Usage Monitoring** with tools like Langfuse, **Live Translation with LibreTranslate** for multilingual support, **Toxic Message Filtering** and much more.
 
 - 📱 **Responsive Design**: Enjoy a seamless experience across Desktop PC, Laptop, and Mobile devices.
 
@@ -31,7 +31,7 @@ Open WebUI is an [extensible](https://github.com/open-webui/pipelines), feature-
 
 - 🎤📹 **Hands-Free Voice/Video Call**: Experience seamless communication with integrated hands-free voice and video call features, allowing for a more dynamic and interactive chat environment.
 
-- 🛠️ **Model Builder**: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through [Open WebUI Community](https://openwebui.com/) integration.
+- 🛠️ **Model Builder**: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through [Anox Dashboard Community](https://openwebui.com/) integration.
 
 - 🐍 **Native Python Function Calling Tool**: Enhance your LLMs with built-in code editor support in the tools workspace. Bring Your Own Function (BYOF) by simply adding your pure Python functions, enabling seamless integration with LLMs.
 
@@ -47,28 +47,28 @@ Open WebUI is an [extensible](https://github.com/open-webui/pipelines), feature-
 
 - 🔐 **Role-Based Access Control (RBAC)**: Ensure secure access with restricted permissions; only authorized individuals can access your Ollama, and exclusive model creation/pulling rights are reserved for administrators.
 
-- 🌐🌍 **Multilingual Support**: Experience Open WebUI in your preferred language with our internationalization (i18n) support. Join us in expanding our supported languages! We're actively seeking contributors!
+- 🌐🌍 **Multilingual Support**: Experience Anox Dashboard in your preferred language with our internationalization (i18n) support. Join us in expanding our supported languages! We're actively seeking contributors!
 
-- 🌟 **Continuous Updates**: We are committed to improving Open WebUI with regular updates, fixes, and new features.
+- 🌟 **Continuous Updates**: We are committed to improving Anox Dashboard with regular updates, fixes, and new features.
 
-Want to learn more about Open WebUI's features? Check out our [Open WebUI documentation](https://docs.openwebui.com/features) for a comprehensive overview!
+Want to learn more about Anox Dashboard's features? Check out our [Anox Dashboard documentation](https://docs.openwebui.com/features) for a comprehensive overview!
 
-## 🔗 Also Check Out Open WebUI Community!
+## 🔗 Also Check Out Anox Dashboard Community!
 
-Don't forget to explore our sibling project, [Open WebUI Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. Open WebUI Community offers a wide range of exciting possibilities for enhancing your chat interactions with Open WebUI! 🚀
+Don't forget to explore our sibling project, [Anox Dashboard Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. Anox Dashboard Community offers a wide range of exciting possibilities for enhancing your chat interactions with Anox Dashboard! 🚀
 
 ## How to Install 🚀
 
 > [!NOTE]  
-> Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [Open WebUI Documentation](https://docs.openwebui.com/) is ready to assist you.
+> Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on [Anox Dashboard Documentation](https://docs.openwebui.com/) is ready to assist you.
 
 ### Quick Start with Docker 🐳
 
 > [!WARNING]
-> When using Docker to install Open WebUI, make sure to include the `-v open-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
+> When using Docker to install Anox Dashboard, make sure to include the `-v open-webui:/app/backend/data` in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
 
 > [!TIP]  
-> If you wish to utilize Open WebUI with Ollama included or CUDA acceleration, we recommend utilizing our official images tagged with either `:cuda` or `:ollama`. To enable CUDA, you must install the [Nvidia CUDA container toolkit](https://docs.nvidia.com/dgx/nvidia-container-runtime-upgrade/) on your Linux/WSL system.
+> If you wish to utilize Anox Dashboard with Ollama included or CUDA acceleration, we recommend utilizing our official images tagged with either `:cuda` or `:ollama`. To enable CUDA, you must install the [Nvidia CUDA container toolkit](https://docs.nvidia.com/dgx/nvidia-container-runtime-upgrade/) on your Linux/WSL system.
 
 ### Installation with Default Configuration
 
@@ -86,7 +86,7 @@ Don't forget to explore our sibling project, [Open WebUI Community](https://open
   docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
-  - **To run Open WebUI with Nvidia GPU support**, use this command:
+  - **To run Anox Dashboard with Nvidia GPU support**, use this command:
 
   ```bash
   docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
@@ -100,9 +100,9 @@ Don't forget to explore our sibling project, [Open WebUI Community](https://open
   docker run -d -p 3000:8080 -e OPENAI_API_KEY=your_secret_key -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
   ```
 
-### Installing Open WebUI with Bundled Ollama Support
+### Installing Anox Dashboard with Bundled Ollama Support
 
-This installation method uses a single container image that bundles Open WebUI with Ollama, allowing for a streamlined setup via a single command. Choose the appropriate command based on your hardware setup:
+This installation method uses a single container image that bundles Anox Dashboard with Ollama, allowing for a streamlined setup via a single command. Choose the appropriate command based on your hardware setup:
 
 - **With GPU Support**:
   Utilize GPU resources by running the following command:
@@ -118,19 +118,19 @@ This installation method uses a single container image that bundles Open WebUI w
   docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
   ```
 
-Both commands facilitate a built-in, hassle-free installation of both Open WebUI and Ollama, ensuring that you can get everything up and running swiftly.
+Both commands facilitate a built-in, hassle-free installation of both Anox Dashboard and Ollama, ensuring that you can get everything up and running swiftly.
 
-After installation, you can access Open WebUI at [http://localhost:3000](http://localhost:3000). Enjoy! 😄
+After installation, you can access Anox Dashboard at [http://localhost:3000](http://localhost:3000). Enjoy! 😄
 
 ### Other Installation Methods
 
-We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [Open WebUI Documentation](https://docs.openwebui.com/getting-started/) or join our [Discord community](https://discord.gg/5rJgQTnV4s) for comprehensive guidance.
+We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [Anox Dashboard Documentation](https://docs.openwebui.com/getting-started/) or join our [Discord community](https://discord.gg/5rJgQTnV4s) for comprehensive guidance.
 
 ### Troubleshooting
 
-Encountering connection issues? Our [Open WebUI Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [Open WebUI Discord](https://discord.gg/5rJgQTnV4s).
+Encountering connection issues? Our [Anox Dashboard Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [Anox Dashboard Discord](https://discord.gg/5rJgQTnV4s).
 
-#### Open WebUI: Server Connection Error
+#### Anox Dashboard: Server Connection Error
 
 If you're experiencing connection issues, it’s often due to the WebUI docker container not being able to reach the Ollama server at 127.0.0.1:11434 (host.docker.internal:11434) inside the container . Use the `--network=host` flag in your docker command to resolve this. Note that the port changes from 3000 to 8080, resulting in the link: `http://localhost:8080`.
 
@@ -150,7 +150,7 @@ docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/wa
 
 In the last part of the command, replace `open-webui` with your container name if it is different.
 
-Check our Migration Guide available in our [Open WebUI Documentation](https://docs.openwebui.com/migration/).
+Check our Migration Guide available in our [Anox Dashboard Documentation](https://docs.openwebui.com/migration/).
 
 ### Using the Dev Branch 🌙
 
@@ -165,7 +165,7 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --a
 
 ## What's Next? 🌟
 
-Discover upcoming features on our roadmap in the [Open WebUI Documentation](https://docs.openwebui.com/roadmap/).
+Discover upcoming features on our roadmap in the [Anox Dashboard Documentation](https://docs.openwebui.com/roadmap/).
 
 ## Supporters ✨
 
@@ -186,7 +186,7 @@ This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LI
 ## Support 💬
 
 If you have any questions, suggestions, or need assistance, please open an issue or join our
-[Open WebUI Discord community](https://discord.gg/5rJgQTnV4s) to connect with us! 🤝
+[Anox Dashboard Discord community](https://discord.gg/5rJgQTnV4s) to connect with us! 🤝
 
 ## Star History
 
@@ -200,4 +200,4 @@ If you have any questions, suggestions, or need assistance, please open an issue
 
 ---
 
-Created by [Timothy J. Baek](https://github.com/tjbck) - Let's make Open WebUI even more amazing together! 💪
+Created by [Timothy J. Baek](https://github.com/tjbck) - Let's make Anox Dashboard even more amazing together! 💪
