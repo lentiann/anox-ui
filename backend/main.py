@@ -493,7 +493,7 @@ async def get_body_and_model_and_user(request):
         raise Exception("Model not found")
     model = app.state.MODELS[model_id]
 
-    user = get_current_user(
+    user = await get_current_user(
         request,
         get_http_authorization_cred(request.headers.get("Authorization")),
     )
@@ -518,7 +518,7 @@ class ChatCompletionMiddleware(BaseHTTPMiddleware):
         metadata = {
             "chat_id": body.pop("chat_id", None),
             "message_id": body.pop("id", None),
-            "session_id": body.pop("session_id", None),
+            "client_id": body.pop("client_id", None),
             "tool_ids": body.get("tool_ids", None),
             "files": body.get("files", None),
         }
@@ -721,7 +721,7 @@ class PipelineMiddleware(BaseHTTPMiddleware):
         # Parse string to JSON
         data = json.loads(body_str) if body_str else {}
 
-        user = get_current_user(
+        user = await get_current_user(
             request,
             get_http_authorization_cred(request.headers["Authorization"]),
         )
@@ -768,6 +768,21 @@ async def commit_session_after_request(request: Request, call_next):
     log.debug("Commit session after request")
     Session.commit()
     return response
+
+# @app.middleware("http")
+# async def commit_session_after_request(request: Request, call_next):
+#     try:
+#         response = await call_next(request)
+#         log.debug("Commit session after request")
+#         Session.commit()
+#         return response
+#     except Exception as e:
+#         log.error(f"Error in request: {str(e)}")
+#         error_detail = str(e) if e.args else "An unexpected error occurred"
+#         return JSONResponse(
+#             status_code=500,
+#             content={"detail": error_detail},
+#         )
 
 
 @app.middleware("http")
@@ -1067,7 +1082,7 @@ async def chat_completed(form_data: dict, user=Depends(get_verified_user)):
         {
             "chat_id": data["chat_id"],
             "message_id": data["id"],
-            "session_id": data["session_id"],
+            "client_id": data["client_id"],
         }
     )
 
@@ -1075,7 +1090,7 @@ async def chat_completed(form_data: dict, user=Depends(get_verified_user)):
         {
             "chat_id": data["chat_id"],
             "message_id": data["id"],
-            "session_id": data["session_id"],
+            "client_id": data["client_id"],
         }
     )
 
@@ -1203,14 +1218,14 @@ async def chat_action(action_id: str, form_data: dict, user=Depends(get_verified
         {
             "chat_id": data["chat_id"],
             "message_id": data["id"],
-            "session_id": data["session_id"],
+            "client_id": data["client_id"],
         }
     )
     __event_call__ = get_event_call(
         {
             "chat_id": data["chat_id"],
             "message_id": data["id"],
-            "session_id": data["session_id"],
+            "client_id": data["client_id"],
         }
     )
 
@@ -1892,7 +1907,7 @@ async def get_app_config(request: Request):
     user = None
     if "token" in request.cookies:
         token = request.cookies.get("token")
-        data = decode_token(token)
+        data = await decode_token(token)
         if data is not None and "id" in data:
             user = Users.get_user_by_id(data["id"])
 

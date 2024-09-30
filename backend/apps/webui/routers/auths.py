@@ -23,6 +23,8 @@ from apps.webui.models.auths import (
 )
 from apps.webui.models.users import Users
 
+from redis_client import redis_client
+
 from utils.utils import (
     get_password_hash,
     get_current_user,
@@ -163,16 +165,26 @@ async def signin(request: Request, response: Response, form_data: SigninForm):
         user = Auths.authenticate_user(form_data.email.lower(), form_data.password)
 
     if user:
-        token = create_token(
+        token = await create_token(
             data={"id": user.id},
             expires_delta=parse_duration(request.app.state.config.JWT_EXPIRES_IN),
         )
+
+        # # Store token in Redis
+        # await redis_client.set(
+        #     f"USER_TOKEN:{user.id}",
+        #     token,
+        #     ex=int(6000),
+        # )
 
         # Set the cookie token
         response.set_cookie(
             key="token",
             value=token,
-            httponly=True,  # Ensures the cookie is not accessible via JavaScript
+            httponly=True,
+            max_age=int(6000),
+            samesite="lax",
+            secure=request.url.scheme == "https",
         )
 
         return {

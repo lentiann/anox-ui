@@ -231,12 +231,7 @@ WEBUI_AUTH_TRUSTED_NAME_HEADER = os.environ.get("WEBUI_AUTH_TRUSTED_NAME_HEADER"
 # WEBUI_SECRET_KEY
 ####################################
 
-WEBUI_SECRET_KEY = os.environ.get(
-    "WEBUI_SECRET_KEY",
-    os.environ.get(
-        "WEBUI_JWT_SECRET_KEY", "t0p-s3cr3t"
-    ),  # DEPRECATED: remove at next major version
-)
+WEBUI_SECRET_KEY = "t0p-s3cr3t"
 
 WEBUI_SESSION_COOKIE_SAME_SITE = os.environ.get(
     "WEBUI_SESSION_COOKIE_SAME_SITE",

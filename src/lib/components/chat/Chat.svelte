@@ -10,6 +10,7 @@
 	import type { Unsubscriber, Writable } from 'svelte/store';
 	import type { i18n as i18nType } from 'i18next';
 	import { WEBUI_BASE_URL } from '$lib/constants';
+	
 
 	import {
 		chatId,
@@ -22,7 +23,6 @@
 		WEBUI_NAME,
 		banners,
 		user,
-		socket,
 		showCallOverlay,
 		currentChatPage,
 		temporaryChatEnabled
@@ -63,7 +63,7 @@
 	import Navbar from '$lib/components/layout/Navbar.svelte';
 	import ChatControls from './ChatControls.svelte';
 	import EventConfirmDialog from '../common/ConfirmDialog.svelte';
-
+	import { socket } from '$lib/stores';
 	const i18n: Writable<i18nType> = getContext('i18n');
 
 	export let chatIdProp = '';
@@ -411,7 +411,7 @@
 				timestamp: m.timestamp
 			})),
 			chat_id: chatId,
-			session_id: $socket?.id,
+			client_id: $user.id,
 			id: responseMessageId
 		}).catch((error) => {
 			toast.error(error);
@@ -461,7 +461,7 @@
 			})),
 			...(event ? { event: event } : {}),
 			chat_id: chatId,
-			session_id: $socket?.id,
+			client_id: $user.id,
 			id: responseMessageId
 		}).catch((error) => {
 			toast.error(error);
@@ -874,7 +874,7 @@
 			keep_alive: $settings.keepAlive ?? undefined,
 			tool_ids: selectedToolIds.length > 0 ? selectedToolIds : undefined,
 			files: files.length > 0 ? files : undefined,
-			session_id: $socket?.id,
+			client_id: $user.id,
 			chat_id: $chatId,
 			id: responseMessageId
 		});
@@ -1216,7 +1216,7 @@
 					max_tokens: params?.max_tokens ?? $settings?.params?.max_tokens ?? undefined,
 					tool_ids: selectedToolIds.length > 0 ? selectedToolIds : undefined,
 					files: files.length > 0 ? files : undefined,
-					session_id: $socket?.id,
+					client_id: $user.id,
 					chat_id: $chatId,
 					id: responseMessageId
 				},
