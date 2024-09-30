@@ -245,3 +245,13 @@ WEBUI_SESSION_COOKIE_SECURE = os.environ.get(
 
 if WEBUI_AUTH and WEBUI_SECRET_KEY == "":
     raise ValueError(ERROR_MESSAGES.ENV_VAR_NOT_FOUND)
+
+###
+# Redis 
+###
+REDIS_URL = os.environ.get("REDIS_URL")
+REDIS_HOST = os.environ.get("REDIS_HOST")
+REDIS_PORT = os.environ.get("REDIS_PORT")
+REDIS_USERNAME = os.environ.get("REDIS_USERNAME")
+REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD")
+REDIS_SSL_CERT_REQS = os.environ.get("REDIS_SSL_CERT_REQS", None)

@@ -170,29 +170,17 @@
 
 #     return __event_call__
 
+from env import REDIS_URL
 import socketio
 
-# import redis.asyncio as redis
 from socketio import AsyncRedisManager
 
 from apps.webui.models.users import Users
 from utils.utils import decode_token
-from redis_client import redis_client, redis_url
+from redis_client import redis_client
 
-# redis_client = redis.Redis(host="localhost", port=6379, db=0)
 
-# redis_url = "rediss://default:AVNS_NCOH8RXCRTrfzv5JS0e@db-caching-fra1-71936-do-user-17488949-0.d.db.ondigitalocean.com:25061"
-
-# redis_client = redis.Redis(
-#     host="db-caching-fra1-71936-do-user-17488949-0.d.db.ondigitalocean.com",
-#     port=25061,
-#     password="AVNS_NCOH8RXCRTrfzv5JS0e",
-#     username="default",
-#     ssl=True,
-#     ssl_cert_reqs=None,
-#     # ssl_ca_certs='/path/to/ca-certificate.crt',
-# )
-mgr = AsyncRedisManager(redis_url)
+mgr = AsyncRedisManager(REDIS_URL)
 
 sio = socketio.AsyncServer(
     cors_allowed_origins=[],

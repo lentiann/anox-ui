@@ -1,13 +1,12 @@
+from env import REDIS_HOST, REDIS_PASSWORD, REDIS_PORT, REDIS_SSL_CERT_REQS, REDIS_USERNAME
 import redis.asyncio as redis
 
-redis_url = "rediss://default:AVNS_NCOH8RXCRTrfzv5JS0e@db-caching-fra1-71936-do-user-17488949-0.d.db.ondigitalocean.com:25061"
-
 redis_client = redis.Redis(
-    host="db-caching-fra1-71936-do-user-17488949-0.d.db.ondigitalocean.com",
-    port=25061,
-    password="AVNS_NCOH8RXCRTrfzv5JS0e",
-    username="default",
+    host=REDIS_HOST,
+    port=REDIS_PORT,
+    password=REDIS_USERNAME,
+    username=REDIS_PASSWORD,
     ssl=True,
-    ssl_cert_reqs=None,
+    ssl_cert_reqs=REDIS_SSL_CERT_REQS,
     # ssl_ca_certs='/path/to/ca-certificate.crt',
 )
